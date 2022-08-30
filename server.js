@@ -26,8 +26,9 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 	        res.end(data);
 	});
 	
-	server.listen(port)
-	console.log('Server listening on port ${port}');
+	server.listen(port, () => {
+		console.log('Server running at port ${port}');
+	});
 });
 
 // Define a const `server` as an arrow function using http.createServer. 
